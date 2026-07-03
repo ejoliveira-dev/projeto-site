@@ -1,0 +1,16 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: rgba(2, 79, 2, 0.349);
+}
+
+main {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 10;
+    box-shadow: 3px 3px 5px black;
+}
