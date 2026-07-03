@@ -1,16 +1,58 @@
-* {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
+body {
+    font-family: "Elms Sans", Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(2, 79, 2, 0.349);
+    margin: 0;
 }
 
-body {
-    background-color: rgba(2, 79, 2, 0.349);
+h1 {
+    font-family: "Bitcount", Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 100px;
+    box-shadow: inset;
+    text-align: center;
+    margin: 10px;
+    padding: 50px;
+}
+
+header {
+    width: 100%;
+    background: 
+        linear-gradient(#024f02, #03760348);
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #184d18;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Nunito", Georgia, 'Times New Roman', Times, serif;
+}
+
+.mensagem-coracao {
+    background: transparent; 
+    border: none;            
+    cursor: pointer;
+    padding: 0;
+}
+
+.mensagem-coracao img {
+    width: 25px;  
+    height: auto;  
+}
+
+h2 {
+    font-family: "Nunito", Georgia, 'Times New Roman', Times, serif;
 }
 
 main {
     background-color: white;
-    width: 500px;
-    margin: auto;
-    padding: 10;
-    box-shadow: 3px 3px 5px black;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 10px rgba(1, 59, 1, 0.459);
 }
