@@ -1,28 +1,55 @@
-body {
-    font-family: "Elms Sans", Georgia, 'Times New Roman', Times, serif;
-    background-color: rgba(2, 79, 2, 0.349);
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: sans-serif;
+    font-family: "Elms Sans", Georgia, 'Times New Roman', Times, serif;
+    background-color: #083d0e8f;
+}
+
+.container {
+    width: 90%; 
+    max-width: 1200px; 
+    height: 85vh; 
+    background: #e8ece9; 
+    backdrop-filter: blur(15px); 
+    border-radius: 30px; 
+    box-shadow: #143f14;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(180deg, #024f02 0%, #3e884f 100%); 
+    padding-bottom: 20px;
+    border-bottom: 4px solid #153a1a;
 }
 
 h1 {
     font-family: "Bitcount", Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
-    font-size: 100px;
-    box-shadow: inset;
+    font-size: clamp(40px, 6vw, 70px);
     text-align: center;
-    margin: 10px;
-    padding: 50px;
-}
-
-header {
-    width: 100%;
-    background: 
-        linear-gradient(#024f02, #03760348);
+    padding: 20px 20px 10px;
+    text-shadow: 3px 3px 0px #013001;
 }
 
 nav {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 10px;
 }
 
 nav a {
@@ -33,16 +60,35 @@ nav a {
     font-family: "Nunito", Georgia, 'Times New Roman', Times, serif;
 }
 
+nav a:hover {
+    color: #ffffff; 
+}
+
+nav a, .divisor {
+    text-decoration: none;
+    color: #e6ffe6; 
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
 .mensagem-coracao {
     background: transparent; 
     border: none;            
     cursor: pointer;
     padding: 0;
+    display: flex; 
+    align-items: center;
+}
+
+.mensagem-coracao:hover {
+    transform: scale(1.1); 
 }
 
 .mensagem-coracao img {
     width: 25px;  
     height: auto;  
+    image-rendering: pixelated;
 }
 
 h2 {
@@ -50,9 +96,11 @@ h2 {
 }
 
 main {
-    background-color: white;
-    width: 90%;
+    background-color: #f0f5f1;
+    width: 100%;
+    color: #1a1a1a;
     max-width: 1400px;
-    margin: 0 auto;
-    box-shadow: 3px 3px 10px rgba(1, 59, 1, 0.459);
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
 }
