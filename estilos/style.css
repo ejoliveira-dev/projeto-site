@@ -12,7 +12,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     font-family: "Elms Sans", Georgia, 'Times New Roman', Times, serif;
-    background-color: #083d0e8f;
+    background-color: #ff9db1;
 }
 
 .container {
@@ -22,8 +22,7 @@ body {
     background: #e8ece9;
     backdrop-filter: blur(15px);
     border-radius: 30px;
-    box-shadow:  #143f14;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px #c27887;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -31,9 +30,9 @@ body {
 
 .pixel-brain {
     position: absolute;
-    width: 600px;
+    width: 630px;
     left: 50%;
-    bottom: -100px;
+    bottom: -110px;
     transform: translateX(-50%);
     image-rendering: pixelated;
     z-index: 1;
@@ -41,10 +40,10 @@ body {
 
 header {
     width: 100%;
-    border-bottom: 4px solid #153a1a;
+    border-bottom: white;
     position: relative;
     height: 320px;
-    background: #ffb30037;
+    background: linear-gradient(#a3849d, #6a4062);
     overflow: hidden;
 
     display: flex;
@@ -61,18 +60,31 @@ header {
 h1 {
     font-family: "Bitcount", Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
-    font-size: clamp(40px, 8vw, 600px);
-    text-shadow: 3px 3px 0px #013001; 
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(1px);
+    padding: 10px 20px;
+    font-size: clamp(20px, 8vw, 100px);
+    text-shadow: 3px 3px 0px #82697d; 
     padding-bottom: 10px;
-    position: relative; 
+    position: relative;
     z-index: 2;
     margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+    font-size: clamp(40px, 8vw, 600px);
+    }
+    .pixel-brain {
+        width: 510px;
+    }
 }
 
 nav {
     display: flex;
     gap: 15px;
-    bottom: 20px;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
@@ -80,28 +92,40 @@ nav {
     gap: 15px;
     margin-top: 10px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
-nav a {
+nav button {
     text-decoration: none;
-    color: #184d18;
+    background: #ff9db1c7;
+    color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     font-family: "Nunito", Georgia, 'Times New Roman', Times, serif;
-}
-
-nav a:hover {
-    color: #ffffff;
-}
-
-nav a,
-.divisor {
+    padding: 12px 15px;
+    border-radius: 12px 12px 0 0;
     text-decoration: none;
-    color: #e6ffe6;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
+    box-shadow: 0 -3px 0 rgba(255, 255, 255,.5), inset 0 -3px rgba(0,0,0,.08);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition:.2s;
+}
+
+nav button.ativa {
+    background: #f0f5f1;
+    color: #184d18;
+    margin-bottom:-4px;
+    border-bottom:4px solid #f0f5f1;
+    z-index: 10;
+}
+
+.pagina {
+    display: none;
+}
+
+.pagina.ativa {
+    display: block;
 }
 
 .mensagem-coracao {

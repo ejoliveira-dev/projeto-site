@@ -18,22 +18,17 @@
     <div class="container">
 
         <header>
+            
             <img src="imagens/header_brain_transp.png" alt="Cérebro em Pixel Art" class="pixel-brain">
 
             <div class="header-content"> 
                 <h1>Olivia's Archive</h1>
             </div>
-            
+
             <nav>
-                <a href="#">Início</a>
-
-                <span class="divisor">|</span>
-
-                <a href="#">Rankings</a>
-
-                <span class="divisor">|</span>
-
-                <a href="#">Sobre</a>
+                <button class="aba ativa" data-pagina="inicio">Início</button>
+                <button class="aba" data-pagina="rankings">Rankings</button>
+                <button class="aba" data-pagina="sobre">Sobre</button>
 
                 <button id="botao-coracao" class="mensagem-coracao">
                     <img src="imagens/coracao-branco-50px.png" alt="coração branco estilo pixel art">
@@ -45,9 +40,14 @@
 
         <main>
            
+            <section id="inicio" class="pagina ativa"></section>
+            <section id="rankings" class="pagina"></section>
+            <section id="sobre" class="pagina"></section>
         </main>
 
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
